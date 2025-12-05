@@ -1,4 +1,0 @@
-spring.application.name=firstProject
-server.port=80
-spring.mvc.view.prefix=/webapp/WEB-INF/jsp/
-spring.mvc.view.suffix=.jsp

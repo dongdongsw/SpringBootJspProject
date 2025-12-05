@@ -1,3 +1,0 @@
-spring.application.name=firstProject
-server.port = 80
-spring.mvc.view.prefix=
