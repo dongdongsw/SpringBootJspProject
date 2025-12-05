@@ -1,0 +1,6 @@
+package com.sist.web.controller;
+
+@Controller
+public class MainController {
+
+}

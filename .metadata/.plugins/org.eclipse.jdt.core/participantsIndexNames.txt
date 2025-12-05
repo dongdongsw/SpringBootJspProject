@@ -1,0 +1,7 @@
+INDEX VERSION 1.134
+C:\bootDev\bootStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3993752608.index
+\firstProject\src\main\java
+C:\bootDev\bootStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\144337665.index
+\SecondProject\src\main\java
+C:\bootDev\bootStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3364082687.index
+\SecondProject\src\main\java
