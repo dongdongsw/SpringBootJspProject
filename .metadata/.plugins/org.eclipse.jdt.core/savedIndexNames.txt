@@ -1,14 +1,8 @@
 INDEX VERSION 1.134+C:\bootDev\bootStudy\.metadata\.plugins\org.eclipse.jdt.core
-3214163203.index
-3754383930.index
-3689487738.index
-787059033.index
-2170391451.index
-1659520971.index
-1865797976.index
-1867078722.index
-2077276162.index
-60941484.index
 407792852.index
-4131393016.index
+3689487738.index
+1182181163.index
+1865797976.index
 1609127860.index
+1867078722.index
+4131393016.index
