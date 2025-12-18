@@ -51,4 +51,14 @@ public class FoodController {
 		model.addAttribute("main_html", "food/list");
 		return "main/main";
 	}
+	
+	@GetMapping("/food/detail")
+	public String food_detail(@RequestParam("fno") int fno, Model model) {
+		
+		FoodVO vo = fService.foodDetailData(fno);
+		
+		model.addAttribute("vo",vo);
+		model.addAttribute("main_html", "food/detail");
+		return "main/main";
+	}
 }

@@ -6,6 +6,7 @@ import java.util.Map;
 import org.springframework.stereotype.Service;
 
 import com.sist.web.mapper.SeoulMapper;
+import com.sist.web.vo.FoodVO;
 import com.sist.web.vo.SeoulVO;
 
 import lombok.RequiredArgsConstructor;
@@ -20,14 +21,38 @@ public class SeoulServiceImpl implements SeoulService{
  *  }
  * 
  */
-	
-	
 	private final SeoulMapper mapper;
 
 	@Override
 	public List<SeoulVO> seoulMainData(Map map) {
 		// TODO Auto-generated method stub
 		return mapper.seoulMainData(map);
+	}
+
+	@Override
+	public List<SeoulVO> seoulListData(Map map) {
+		// TODO Auto-generated method stub
+		return mapper.seoulListData(map);
+	}
+
+	@Override
+	public int seoutTotalPage(Map map) {
+		// TODO Auto-generated method stub
+		return mapper.seoutTotalPage(map);
+	}
+
+	@Override
+	public SeoulVO seoulDetailData(Map map) {
+		// TODO Auto-generated method stub
+		mapper.seoulHitIncrement(map);
+		
+		return mapper.seoulDetailData(map);
+	}
+
+	@Override
+	public List<FoodVO> seoulNearFoodHouse(String address) {
+		// TODO Auto-generated method stub
+		return mapper.seoulNearFoodHouse(address);
 	}
 	
 }

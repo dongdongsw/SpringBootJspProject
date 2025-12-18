@@ -15,6 +15,6 @@ import lombok.Data;
  */
 @Data
 public class RecipeVO {
-	private int no, likecount, jjimcount, replycount;
+	private int no, likecount, jjimcount, replycount, hit;
 	private String title, poster, chef, link;
 }

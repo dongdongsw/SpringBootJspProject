@@ -10,7 +10,9 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.mvc.condition.RequestConditionHolder;
 
 import com.sist.web.service.FoodService;
+import com.sist.web.service.RecipeService;
 import com.sist.web.vo.FoodVO;
+import com.sist.web.vo.RecipeVO;
 
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
@@ -61,6 +63,7 @@ import lombok.RequiredArgsConstructor;
 public class FooterAOP {
 	// FoodController => fService 동일하다 (싱글톤으로 저장)
 	private final FoodService fService;
+	private final RecipeService rService;
 	
 	@After("execution(* com.sist.web.controller.*Controller.*(..))")
 	public void after() {
@@ -68,6 +71,8 @@ public class FooterAOP {
 				((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
 		
 		List<FoodVO> fList = fService.foodTop10Data();
+		List<RecipeVO> rList = rService.recipeTop10();
 		request.setAttribute("fList", fList);
+		request.setAttribute("rList", rList);
 	}
 }

@@ -32,4 +32,8 @@ public interface FoodService {
 	 */
 	// Footer에 출력
 	public List<FoodVO> foodTop10Data();
+	
+	// 상세보기
+	public FoodVO foodDetailData(int fno);
+
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 
 import com.sist.web.vo.FoodVO;
@@ -12,7 +13,7 @@ import com.sist.web.vo.FoodVO;
 @Repository
 public interface FoodMapper {
 
-	@Select("SELECT fno, name, poster "
+	@Select("SELECT fno, name, poster, hit "
 			+ "FROM menupan_food "
 			+ "ORDER BY fno ASC "
 			+ "OFFSET #{start} ROWS FETCH NEXT 12 ROWS ONLY")
@@ -29,4 +30,15 @@ public interface FoodMapper {
 			+ "WHERE rownum <= 10")
 	public List<FoodVO> foodTop10Data();
 	
+	
+	// 조회수 증가
+	@Update("UPDATE menupan_food SET "
+			+ "hit = hit + 1 "
+			+ "WHERE fno = #{fno}")
+	public void foodHitIncrement(int fno);
+	
+	@Select("SELECT fno, name, hit, poster, type, address, phone, theme, price, time, parking, score, content "
+			+ "FROM menupan_food "
+			+ "WHERE fno = #{fno}")
+	public FoodVO foodDetailData(int fno);
 }
